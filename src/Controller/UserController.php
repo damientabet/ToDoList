@@ -24,7 +24,6 @@ class UserController extends Controller
     public function createAction(Request $request)
     {
         $user = new User();
-        $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
 
@@ -36,13 +35,6 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
-            $this->addFlash('success', "L'utilisateur a bien été ajouté.");
-
-            return $this->redirectToRoute('user_list');
-        }
-
-        return $this->render('user/create.html.twig', ['form' => $form->createView()]);
-    }
 
     /**
      * @Route("/users/{id}/edit", name="user_edit")
