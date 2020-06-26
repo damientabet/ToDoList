@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\TaskRepository")
  * @ORM\Table
  */
 class Task
@@ -41,10 +41,9 @@ class Task
     private $isDone;
 
     /**
-     * @var
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="tasks")
      */
-    private $id_user;
+    private $user;
 
     public function __construct()
     {
@@ -121,27 +120,15 @@ class Task
         return $this->isDone;
     }
 
-    /**
-     * Set idUser
-     *
-     * @param User $idUser
-     *
-     * @return Task
-     */
-    public function setIdUser(User $idUser = null)
+    public function getUser(): ?User
     {
-        $this->id_user = $idUser;
-
-        return $this;
+        return $this->user;
     }
 
-    /**
-     * Get idUser
-     *
-     * @return User
-     */
-    public function getIdUser()
+    public function setUser(?User $user): self
     {
-        return $this->id_user;
+        $this->user = $user;
+
+        return $this;
     }
 }
