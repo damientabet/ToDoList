@@ -1,4 +1,10 @@
 {
+    "blackfire/php-sdk": {
+        "version": "v1.23.0"
+    },
+    "composer/ca-bundle": {
+        "version": "1.2.7"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -93,6 +99,9 @@
     "doctrine/sql-formatter": {
         "version": "1.1.0"
     },
+    "liip/test-fixtures-bundle": {
+        "version": "1.9.1"
+    },
     "monolog/monolog": {
         "version": "1.25.4"
     },
@@ -106,7 +115,7 @@
         "version": "2.1.1"
     },
     "php": {
-        "version": "7.1"
+        "version": "7.3"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -132,6 +141,9 @@
     "symfony/asset": {
         "version": "v4.4.10"
     },
+    "symfony/browser-kit": {
+        "version": "v4.4.10"
+    },
     "symfony/cache": {
         "version": "v4.4.10"
     },
@@ -153,6 +165,9 @@
     },
     "symfony/contracts": {
         "version": "v1.1.8"
+    },
+    "symfony/css-selector": {
+        "version": "v4.4.10"
     },
     "symfony/debug": {
         "version": "v4.4.10"
@@ -176,6 +191,9 @@
         "version": "v4.4.10"
     },
     "symfony/doctrine-bridge": {
+        "version": "v4.4.10"
+    },
+    "symfony/dom-crawler": {
         "version": "v4.4.10"
     },
     "symfony/dotenv": {
@@ -276,6 +294,21 @@
     "symfony/options-resolver": {
         "version": "v4.4.10"
     },
+    "symfony/phpunit-bridge": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "6d0e35f749d5f4bfe1f011762875275cd3f9874f"
+        },
+        "files": [
+            ".env.test",
+            "bin/phpunit",
+            "phpunit.xml.dist",
+            "tests/bootstrap.php"
+        ]
+    },
     "symfony/polyfill-ctype": {
         "version": "v1.17.0"
     },
@@ -346,6 +379,9 @@
     },
     "symfony/stopwatch": {
         "version": "v4.4.10"
+    },
+    "symfony/test-pack": {
+        "version": "v1.0.6"
     },
     "symfony/twig-bridge": {
         "version": "v4.4.10"
