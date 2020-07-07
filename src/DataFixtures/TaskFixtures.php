@@ -5,9 +5,13 @@ namespace App\DataFixtures;
 use App\Entity\Task;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
-use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
+/**
+ * Class TaskFixtures
+ * @package App\DataFixtures
+ * @codeCoverageIgnore
+ */
 class TaskFixtures extends Fixture implements DependentFixtureInterface
 {
 
