@@ -35,6 +35,7 @@
 /web/bundles/
 /web/uploads/
 /web/test-coverage/
+/web/resultTest.html
 
 # PHPUnit
 /app/phpunit.xml
