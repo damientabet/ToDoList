@@ -56,6 +56,10 @@ class Task
         return $this->id;
     }
 
+    /**
+     * @return \Datetime
+     * @codeCoverageIgnore
+     */
     public function getCreatedAt()
     {
         return $this->createdAt;
@@ -114,6 +118,7 @@ class Task
      * Get isDone
      *
      * @return boolean
+     * @codeCoverageIgnore
      */
     public function getIsDone()
     {
