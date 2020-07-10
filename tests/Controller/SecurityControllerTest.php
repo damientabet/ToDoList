@@ -27,21 +27,15 @@ class SecurityControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
-    /**
-     * @expectedExceptions
-     */
     public function testLogout()
     {
-//        $client = static::createClient([], [
-//            'PHP_AUTH_USER' => 'administrateur@todolist.com',
-//            'PHP_AUTH_PW'   => 'admintest',
-//        ]);
-//        $crawler = $client->request('GET', '/”');
-//        $link = $crawler->selectLink('Se déconnecter')->link();
-//        $client->click($link);
-
-        $this->expectException('Logout');
-//        $crawler = $client->followRedirect();
-//        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $client = static::createClient([], [
+            'PHP_AUTH_USER' => 'administrateur@todolist.com',
+            'PHP_AUTH_PW'   => 'admintest',
+        ]);
+        $crawler = $client->request('GET', '/logout');
+        $this->assertEquals(302, $client->getResponse()->getStatusCode());
+        $crawler = $client->followRedirect();
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 }
